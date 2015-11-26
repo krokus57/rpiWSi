@@ -3,9 +3,9 @@
 import os
 import rpiWSi
 
-#weather underground api key
-wu_api_key = 'b5abcd9ffda0a51f'
-#gps coordinates
+#weather underground api key NEED TO CHANGE
+wu_api_key = 'b12345abcd9ffda0a51f'
+#gps coordinates NEED TO CHANGE
 wu_gps_coordinates = '55.6890593,37.2906527'
 #weather underground api language
 wu_language = 'RU'
