@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-import rpiWSi
 
 #weather underground api key NEED TO CHANGE
 wu_api_key = 'b12345abcd9ffda0a51f'
@@ -15,7 +14,7 @@ wu_icon_set = 'k'
 
 
 debug=False
-#debug=True
+debug=True
 show_rect = False
 #show_rect = True
 
@@ -73,6 +72,7 @@ BACK = (64,67,73)
 app_dir = os.path.dirname(__file__) 
 
 if __name__=="__main__":
+    import rpiWSi,os
     if os.uname()[0]=="Linux":
         rpiWSi.ws_start(90)
     else:
