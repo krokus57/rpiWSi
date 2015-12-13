@@ -14,7 +14,7 @@ wu_icon_set = 'k'
 
 
 debug=False
-debug=True
+#debug=True
 show_rect = False
 #show_rect = True
 
