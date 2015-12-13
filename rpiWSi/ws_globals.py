@@ -4,6 +4,8 @@ import os
 
 #weather underground api key NEED TO CHANGE
 wu_api_key = 'b12345abcd9ffda0a51f'
+wu_api_key = 'b5abcd9ffda0a51f'
+
 #gps coordinates NEED TO CHANGE
 wu_gps_coordinates = '55.6890593,37.2906527'
 #weather underground api language
@@ -12,9 +14,13 @@ wu_language = 'RU'
 #do not change!
 wu_icon_set = 'k'
 
+#choose you temperature units (C/F)
+temperature_inits="celsius"
+#temperature_inits="fahrenheit"
 
-debug=False
-#debug=True
+
+#debug=False
+debug=True
 show_rect = False
 #show_rect = True
 

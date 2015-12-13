@@ -79,36 +79,47 @@ def get_wu_data(wu_api_key,wu_gps_coordinates,wu_language='EN',wu_icon_set='k'):
 
         #print wu_json_string1
         #print wu_json_string2
-        wu_data["temp_now"]=wu_parsed_json1['current_observation']["temp_c"]
-        wu_data["temp_now_feels_like"]=wu_parsed_json1['current_observation']["feelslike_c"]
+        
+        if temperature_inits=="celsius":
+            wu_data["temp_now"]=wu_parsed_json1['current_observation']["temp_c"]
+            wu_data["temp_now_feels_like"]=wu_parsed_json1['current_observation']["feelslike_c"]
+        else:
+            wu_data["temp_now"]=wu_parsed_json1['current_observation']["temp_f"]
+            wu_data["temp_now_feels_like"]=wu_parsed_json1['current_observation']["feelslike_f"]
+        
         wu_data["wind_kph"]=unicode(int(int(wu_parsed_json1['current_observation']["wind_kph"])*0.2778))
         wu_data["icon_0"]=wu_parsed_json1['current_observation']["icon"]
         
-        wu_data["local_temp_out"]=wu_parsed_json1['current_observation']["temp_c"]
+        if temperature_inits=="celsius":
+            wu_data["local_temp_out"]=wu_parsed_json1['current_observation']["temp_c"]
+        else:
+            wu_data["local_temp_out"]=wu_parsed_json1['current_observation']["temp_f"]
+            
         wu_data["local_hum_out"]=string.replace(wu_parsed_json1['current_observation']["relative_humidity"],"%","")
         wu_data["local_pressure"]=unicode(int(float(wu_parsed_json1['current_observation']["pressure_mb"])*750.06/1000.0))
         
+            
         if icons.has_key(wu_data["icon_0"]):wu_data["image_0"]=icons[wu_data["icon_0"]]
         else:wu_data["image_0"]=icons[wu_data["na"]]
 
         if debug: wu_data["wind_kph"]=unicode(random.randint(7,15))
         #xxx=12/0
         
-        wu_data["temp_fore_0_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][0]["low"]["celsius"]
-        wu_data["temp_fore_0_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][0]["high"]["celsius"]
+        wu_data["temp_fore_0_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][0]["low"][temperature_inits]
+        wu_data["temp_fore_0_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][0]["high"][temperature_inits]
         wu_data["conditions_0"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][0]["conditions"]
         
-        wu_data["temp_fore_1_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][1]["low"]["celsius"]
-        wu_data["temp_fore_1_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][1]["high"]["celsius"]
+        wu_data["temp_fore_1_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][1]["low"][temperature_inits]
+        wu_data["temp_fore_1_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][1]["high"][temperature_inits]
         wu_data["icon_1"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][1]["icon"]
         
         
-        wu_data["temp_fore_2_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][2]["low"]["celsius"]
-        wu_data["temp_fore_2_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][2]["high"]["celsius"]
+        wu_data["temp_fore_2_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][2]["low"][temperature_inits]
+        wu_data["temp_fore_2_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][2]["high"][temperature_inits]
         wu_data["icon_2"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][2]["icon"]
         
-        wu_data["temp_fore_3_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][3]["low"]["celsius"]
-        wu_data["temp_fore_3_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][3]["high"]["celsius"]
+        wu_data["temp_fore_3_min"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][3]["low"][temperature_inits]
+        wu_data["temp_fore_3_max"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][3]["high"][temperature_inits]
         wu_data["icon_3"]=wu_parsed_json2['forecast']["simpleforecast"]["forecastday"][3]["icon"]
         
         if icons.has_key(wu_data["icon_1"]):wu_data["image_1"]=icons[wu_data["icon_1"]]
