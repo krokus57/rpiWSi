@@ -136,11 +136,11 @@ def draw_data(screen,page,data,angle):
  
      #Давление влажность ветер (заголовки)
     yy=186
-    text=u"Давление"
+    text=str_pressure
     draw_text(screen,text,'fonts/calibri.ttf',16, 0               , yy, screen_width/3,"center",WHITE,BACK)
-    text=u"Ветер"
+    text=str_wind
     draw_text(screen,text,'fonts/calibri.ttf',16, screen_width/3  , yy, screen_width/3,"center",WHITE,BACK)
-    text=u"Влажность"
+    text=str_humidity
     draw_text(screen,text,'fonts/calibri.ttf',16, screen_width/3*2, yy, screen_width/3,"center",WHITE,BACK)
 
     #Давление влажность ветер(данные)
@@ -162,18 +162,18 @@ def draw_data(screen,page,data,angle):
     yy=pressure_rect.top+2
     xx=pressure_rect.left+pressure_rect.width+4
     ww=ww
-    text=u"мм"
+    text=str_pressure_units_line_1
     p_ei=draw_text(screen,text,'fonts/calibri.ttf',10, xx , yy, ww,"center",WHITE,BACK)
-    text=u"рт"
+    text=str_pressure_units_line_2
     yy=pressure_rect.top+pressure_rect.height/3
     p_ei=draw_text(screen,text,'fonts/calibri.ttf',10, xx , yy, ww,"center",WHITE,BACK)
     yy=pressure_rect.top+pressure_rect.height/3*2-2
-    text=u"ст"
+    text=str_pressure_units_line_3
     p_ei=draw_text(screen,text,'fonts/calibri.ttf',10, xx , yy, ww,"center",WHITE,BACK)
     
     yy=wind_rect.top+humidity_rect.height/3
     xx=wind_rect.left+wind_rect.width+6
-    text=u"м/с"
+    text=str_wind_speed
     p_ei=draw_text(screen,text,'fonts/calibri.ttf',10, xx , yy, ww,"center",WHITE,BACK)
     
     yy=humidity_rect.top+humidity_rect.height/3
@@ -183,7 +183,7 @@ def draw_data(screen,page,data,angle):
     
      #dates for forecast
     yy=240
-    text=u"завтра"
+    text=str_tomorrow
     rr=draw_text(screen,text,'fonts/calibri.ttf',13, 0               , yy, screen_width/3,"center",WHITE,BACK)
     
     
