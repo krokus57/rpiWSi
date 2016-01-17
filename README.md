@@ -135,3 +135,5 @@ After successfull setup you can get current screenshot from raspberry using brow
 
     http://raspberry_ip:8080
 
+![](/rpiWSi/rpiws_2016-01-17-19-23.png)
+![](/rpiWSi/rpiws_2015-12-07-05.png)
