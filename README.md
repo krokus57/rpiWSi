@@ -134,3 +134,4 @@ run the code from console inside rpiWSi folder with command :
 After successfull setup you can get current screenshot from raspberry using browser:
 
     http://raspberry_ip:8080
+
