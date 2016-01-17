@@ -1,32 +1,29 @@
-# rpiWSi
+##Raspberry PI based desktop weather forecast station and clock with 3.2 lcd display.
 
-Raspberry PI based desktop weather forecast station and clock with 3.2 lcd display.
+###Hardware setup:
 
-Hardware setup:
-
-    Raspberry PI model B https://www.raspberrypi.org/products/model-b/
-    3.2" LCD display for raspberry PI http://www.aliexpress.com/item/Free-Shipping-2014-New-Arrival-1Pcs-3-2-Inch-LCD-Touch-Screen-Display-Monitor-Module-For/1975039117.html
-    USB Wi-fi dongle http://www.tp-linkru.com/products/details/cat-11_TL-WN725N.html
-    SD card
+-   Raspberry PI model B https://www.raspberrypi.org/products/model-b/
+-   3.2" LCD display for raspberry PI http://www.aliexpress.com/item/Free-Shipping-2014-New-Arrival-1Pcs-3-2-Inch-LCD-Touch-Screen-Display-Monitor-Module-For/1975039117.html
+-   USB Wi-fi dongle http://www.tp-linkru.com/products/details/cat-11_TL-WN725N.html
+-   SD card
 
 In order to get smaller box I need to:
-
-    unsolder two ports (audio jack and composite video port)
-    solder power wires directly to a usb port
+- unsolder two ports (audio jack and composite video port)
+- solder power wires directly to a usb port
 
 The idea of dock from http://www.thingiverse.com/thing:525241
 
-Software setup:
+###Software setup:
 
 Python source code: https://github.com/krokus57/rpiWSi
 
 You need to have:
-  some experience in linux and programing
-  working internet connection
-  install python 2.7
-  pygame framework
-  get api key from api.weatherunderground.com
-  weather icons
+-  some experience in linux and programing
+-  working internet connection
+-  install python 2.7
+-  pygame framework
+-  get api key from api.weatherunderground.com
+-  weather icons
 
 I use great VClouds icons from http://www.deviantart.com/art/VClouds-Weather-2-179058977
 You have to get permission from author to use them in you project!
