@@ -29,7 +29,7 @@ I use great VClouds icons from http://www.deviantart.com/art/VClouds-Weather-2-1
 You have to get permission from author to use them in you project!
 
 For the first run change next lines in file globals.py:
-    
+
     #==============================================================
     #interface language. uncomment one of them. you can create you own language file and use it here
     #from lang_ru import *
@@ -62,14 +62,15 @@ For the first run change next lines in file globals.py:
     
     #screen resolution
     screen_width,screen_height = 240,320
-    #if you want to change resolution you need to completely rewrite function function draw_data(screen,page,data,angle) in file ws_drawing.py
+    #if you want to change resolution you need to completely rewrite function 
+    #draw_data(screen,page,data,angle) in file ws_drawing.py
     #==============================================================
 
 
-Change lang_XX.py file if you need:
-XX=RU or EN or yours new file:
+Change lang_XX.py file if you need: XX=RU or EN or yours new file:
+
     #==============================================================
-    next arrays is the names of days and months on you language
+    next arrays are the names of days and months on you language
     days_of_week={1:u"Mon",
                   2:u"Tue",
                   3:u"Wed",
@@ -78,7 +79,7 @@ XX=RU or EN or yours new file:
                   6:u"Sat",
                   0:u"Sun"
               }
-    
+              
     months={
             1 :u"January",
             2 :u"February",
@@ -93,8 +94,7 @@ XX=RU or EN or yours new file:
             11:u"November",
             12:u"December",
             }
-    
-    
+            
     short_months={
             1 :u"JAN",
             2 :u"FEB",
@@ -109,9 +109,7 @@ XX=RU or EN or yours new file:
             11:u"NOV",
             12:u"DEC",
             }
-    
-    
-    
+            
     #other localizing strings:
     str_tomorrow=u"Tomorrow"
     str_pressure=u"Pressure"
@@ -125,10 +123,13 @@ XX=RU or EN or yours new file:
 
 
 All other work for drawing on the screen see in file ws_drawing.py
-f   unction draw_data(screen,page,data,angle)
+
+    function draw_data(screen,page,data,angle)
 
 run the code from console inside rpiWSi folder with command :
+
     python rpiWSi.py
 
 After successfull setup you can get current screenshot from raspberry using browser:
+
     http://raspberry_ip:8080
