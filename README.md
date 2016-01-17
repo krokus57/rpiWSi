@@ -25,8 +25,9 @@ You need to have:
 -  get api key from api.weatherunderground.com
 -  weather icons
 
-I use great VClouds icons from http://www.deviantart.com/art/VClouds-Weather-2-179058977
-You have to get permission from author to use them in you project!
+I use great VClouds icons from 
+    http://www.deviantart.com/art/VClouds-Weather-2-179058977
+#####You have to get permission from author to use them in you project!
 
 For the first run change next lines in file globals.py:
 
