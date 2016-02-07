@@ -17,12 +17,12 @@ The idea of dock from http://www.thingiverse.com/thing:525241
 
 Python source code: https://github.com/krokus57/rpiWSi
 
-You need to have:
+You need:
 -  some experience in linux and programing
 -  working internet connection
--  install python 2.7
--  pygame framework
--  get api key from api.weatherunderground.com
+-  installed python 2.7
+-  installed pygame framework
+-  api key from api.weatherunderground.com
 -  weather icons
 
 I use great VClouds icons from 
